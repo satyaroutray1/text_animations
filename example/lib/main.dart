@@ -1,3 +1,4 @@
+import 'package:example/rotating%20text.dart';
 import 'package:example/text%20pressure.dart';
 import 'package:flutter/material.dart';
 
@@ -40,9 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return SafeArea(child: Scaffold(
       body: Column(
         children: [
-          //TextPressure('Hello There'),
-          //GradientText(),
-          CircularText(),
+          // TextPressure('Hello There'),
+          // GradientText(),
+          // CircularText(),
+          RotatingText()
         ],
       )
     ));
