@@ -158,16 +158,39 @@ class GradientText extends StatefulWidget{
   State<GradientText> createState() => _GradientTextState();
 }
 
-class _GradientTextState extends State<GradientText> {
+class _GradientTextState extends State<GradientText> with SingleTickerProviderStateMixin{
 
-  final textGradient = LinearGradient(colors: [Colors.red, Colors.teal]);
+  final textGradient = LinearGradient(colors: [Colors.red, Colors.teal, Colors.green]);
+
+  late AnimationController _animationController;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(vsync: this, duration: Duration(seconds: 3));
+    _animation = Tween<double>(begin: 0, end: 200).animate(_animationController)
+    ..addListener((){
+      setState(() {
+
+      });
+    });
+    _animationController.repeat(reverse: true);
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context){
     return ShaderMask(
       blendMode: BlendMode.srcIn,
       shaderCallback: (Rect bounds) {
-        return textGradient.createShader(bounds);
+        final rect = bounds.shift(Offset(_animation.value, 5));
+        return textGradient.createShader(rect);
       },
       child: Text('Hello there', style: TextStyle(
         fontSize: 40,
