@@ -9,32 +9,54 @@ class RotatingText extends StatefulWidget {
 class _RotatingTextState extends State<RotatingText> with TickerProviderStateMixin{
   late AnimationController _animationController1, _animationController2;
   late Animation _animation1, _animation2;
+
+  List<String> skills = ['coding', 'minds', 'collect'];
+
+  int index = 0;
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    _animationController1 =AnimationController(vsync: this, duration: Duration(seconds: 10));
+    _animationController1 = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    );
+    first();
+  }
 
+  void first() {
     _animation1 = Tween<double>(begin: -150, end: 0)
-        .animate(CurvedAnimation(parent: _animationController1, curve: Curves.bounceOut)
-    )..addListener((){
-      setState(() {
-
+        .animate(CurvedAnimation(parent: _animationController1, curve: Curves.bounceOut))
+      ..addListener(() {
+        setState(() {});
+      })
+      ..addStatusListener((status) async {
+        if (status == AnimationStatus.completed) {
+          await Future.delayed(const Duration(seconds: 1));
+          second();
+        }
       });
-    })..addStatusListener((status) async{
-      if(status == AnimationStatus.completed) {
-        await Future.delayed(const Duration(seconds: 1));
-        _animation1 = Tween<double>(begin: 0, end: 60).animate(CurvedAnimation(parent: _animationController1, curve: Curves.bounceIn))..addListener((){
+
+    _animationController1..reset()..forward();
+  }
+
+  void second() {
+    _animation1 = Tween<double>(begin: 0, end: 60)
+        .animate(CurvedAnimation(parent: _animationController1, curve: Curves.bounceIn))
+      ..addListener(() {
+        setState(() {});
+      })
+      ..addStatusListener((status) async {
+        if (status == AnimationStatus.completed) {
+          await Future.delayed(const Duration(seconds: 1));
           setState(() {
-
+            //index = (index + 1) % skills.length;
           });
-        });
-        _animationController1..reset()..forward();
-      }
+          first(); // loop
+        }
+      });
 
-    });
-    _animationController1.forward();
-
+    _animationController1..reset()..forward();
   }
   @override
   Widget build(BuildContext context) {
@@ -48,16 +70,15 @@ class _RotatingTextState extends State<RotatingText> with TickerProviderStateMix
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(5)),
                 color: Colors.blueAccent,
-
               ),
-              child: CustomText(text: 'coding',textColor: Colors.transparent),
+              child: CustomText(text: skills[index],textColor: Colors.transparent),
             ),
 
             Positioned(
               bottom: _animation1.value,
               child: Container(
                   padding:EdgeInsets.symmetric(horizontal: 10),
-                  child: CustomText(text: 'coding',)),
+                  child: CustomText(text: skills[index],)),
             ),
           ],
         )
