@@ -169,7 +169,7 @@ class _GradientTextState extends State<GradientText> with SingleTickerProviderSt
   void initState() {
     super.initState();
     _animationController = AnimationController(vsync: this, duration: Duration(seconds: 3));
-    _animation = Tween<double>(begin: 0, end: 200).animate(_animationController)
+    _animation = Tween<double>(begin: -.5, end: .5).animate(_animationController)
     ..addListener((){
       setState(() {
 
@@ -189,7 +189,7 @@ class _GradientTextState extends State<GradientText> with SingleTickerProviderSt
     return ShaderMask(
       blendMode: BlendMode.srcIn,
       shaderCallback: (Rect bounds) {
-        final rect = bounds.shift(Offset(_animation.value, 5));
+        final rect = bounds.shift(Offset(_animation.value*bounds.width, 5));
         return textGradient.createShader(rect);
       },
       child: Text('Hello there', style: TextStyle(
