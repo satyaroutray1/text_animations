@@ -37,9 +37,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
-      body: Container(
-        child: TextPressure('Hello There')//FuzzyText('Hello'),
-      ),
+      body: Column(
+        children: [
+          TextPressure('Hello There'),
+          GradientText(),
+
+        ],
+      )
     ));
   }
 }
@@ -143,6 +147,32 @@ class GlitchTextLetter extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class GradientText extends StatefulWidget{
+  const GradientText({super.key});
+
+  @override
+  State<GradientText> createState() => _GradientTextState();
+}
+
+class _GradientTextState extends State<GradientText> {
+
+  final textGradient = LinearGradient(colors: [Colors.red, Colors.teal]);
+
+  @override
+  Widget build(BuildContext context){
+    return ShaderMask(
+      blendMode: BlendMode.srcIn,
+      shaderCallback: (Rect bounds) {
+        return textGradient.createShader(bounds);
+      },
+      child: Text('Hello there', style: TextStyle(
+        fontSize: 40,
+        fontWeight: FontWeight.bold
+      ),),
     );
   }
 }
