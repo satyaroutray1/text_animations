@@ -3,6 +3,7 @@ import 'package:example/text%20pressure.dart';
 import 'package:flutter/material.dart';
 
 import 'circular text.dart';
+import 'glitch text.dart';
 import 'gradient text.dart';
 
 void main() {
@@ -44,7 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
           // TextPressure('Hello There'),
           // GradientText(),
           // CircularText(),
-          RotatingText()
+          //RotatingText()
+          //FuzzyText('ttttttttt'),
+          GlitchTextLetter('letter')
         ],
       )
     ));
