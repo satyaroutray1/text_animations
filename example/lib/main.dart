@@ -1,6 +1,7 @@
 import 'package:example/blur%20text.dart';
 import 'package:example/constants.dart';
 import 'package:example/rotating%20text.dart';
+import 'package:example/shinny%20text.dart';
 import 'package:example/text%20pressure.dart';
 import 'package:flutter/material.dart';
 
@@ -48,14 +49,15 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TextPressure('Hello There'),
-            GradientText(text: 'Hello There'),
-            CircularText(text: 'Hello There,You!! Flutter!',),
-            RotatingText(),
-            //FuzzyText('ttttttttt'),
-            GlitchTextLetter('letter'),
-            BlurText(words: ['Flutter', 'animations', 'are', 'awesome','Flutter'],),
-            //WordFadeInText(sentence: 'Flutter animations are awesome'),
+            // TextPressure('Hello There'),
+            // GradientText(text: 'Hello There'),
+            // CircularText(text: 'Hello There,You!! Flutter!',),
+            // RotatingText(),
+            // //FuzzyText('ttttttttt'),
+            // GlitchTextLetter('letter'),
+            // BlurText(words: ['Flutter', 'animations', 'are', 'awesome','Flutter'],),
+            // //WordFadeInText(sentence: 'Flutter animations are awesome'),
+            ShinnyText(text: 'Hello There')
           ],
         ),
       )
