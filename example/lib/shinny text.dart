@@ -43,7 +43,6 @@ class _ShinnyTextState extends State<ShinnyText> with SingleTickerProviderStateM
       },
       child: Text(widget.text, style: TextStyle(
           fontSize: 40,
-          //fontWeight: FontWeight.bold
       ),),
     );
   }

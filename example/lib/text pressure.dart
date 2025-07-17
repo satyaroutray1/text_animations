@@ -34,7 +34,7 @@ class _TextPressureState extends State<TextPressure> {
                 char,
                 style:  TextStyle(
                   fontSize: 36,
-                  fontWeight: _hovered[index] == true ? FontWeight.bold : FontWeight.w300,
+                  fontWeight: _hovered[index] == true ? FontWeight.w900 : FontWeight.w300,
                   color: Constants.textColor,
                   letterSpacing: 4,
                 ),
