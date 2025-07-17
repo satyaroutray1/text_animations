@@ -1,3 +1,4 @@
+import 'package:example/constants.dart';
 import 'package:flutter/material.dart';
 
 class TextPressure extends StatefulWidget {
@@ -34,7 +35,7 @@ class _TextPressureState extends State<TextPressure> {
                 style:  TextStyle(
                   fontSize: 36,
                   fontWeight: _hovered[index] == true ? FontWeight.bold : FontWeight.w300,
-                  //color: Colors.white,
+                  color: Constants.textColor,
                   letterSpacing: 4,
                 ),
               ),

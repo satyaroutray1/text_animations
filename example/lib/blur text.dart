@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 class BlurText extends StatefulWidget {
-  const BlurText({super.key});
+  const BlurText({super.key, required this.words});
 
+  final List<String> words;
   @override
   State<BlurText> createState() => _BlurTextState();
 }
@@ -15,7 +16,7 @@ class _BlurTextState extends State<BlurText> with SingleTickerProviderStateMixin
   late Animation<double> _animation;
   late List<Animation<double>> dropAnimations;
 
-  final List<String> words = ['Flutter', 'animations', 'are', 'awesome','Flutter'];
+   //List<String> words = widget.textlist;
 
   @override
   void initState() {
@@ -28,9 +29,9 @@ class _BlurTextState extends State<BlurText> with SingleTickerProviderStateMixin
 
     dropAnimations = [];
 
-    for (int i = 0; i < words.length; i++) {
-      double start = i * 1/words.length;
-      double end = start + 1/words.length;
+    for (int i = 0; i < widget.words.length; i++) {
+      double start = i * 1/widget.words.length;
+      double end = start + 1/widget.words.length;
 
       _animation = Tween<double>(begin: 0, end: 100.0).animate(
         CurvedAnimation(
@@ -56,7 +57,7 @@ class _BlurTextState extends State<BlurText> with SingleTickerProviderStateMixin
   Widget build(BuildContext context) {
     return Row(
       children: [
-        for(int i = 0; i < words.length; i++)
+        for(int i = 0; i < widget.words.length; i++)
           Column(
             children: [
               SizedBox(
@@ -65,7 +66,7 @@ class _BlurTextState extends State<BlurText> with SingleTickerProviderStateMixin
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  words[i],
+                  widget.words[i],
                   style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.bold,

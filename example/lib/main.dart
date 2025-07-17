@@ -40,21 +40,24 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
       backgroundColor: Constants.backgroundColor,
-      body: Column(
-        children: [
-          // TextPressure('Hello There'),
-          // GradientText(),
-          // CircularText(),
-          //RotatingText()
-          //FuzzyText('ttttttttt'),
-          //GlitchTextLetter('letter'),
-          BlurText()
-          //WordFadeInText(sentence: 'Flutter animations are awesome'),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            TextPressure('Hello There'),
+            GradientText(text: 'Hello There'),
+            CircularText(text: 'Hello There,You!! Flutter!',),
+            RotatingText(),
+            //FuzzyText('ttttttttt'),
+            GlitchTextLetter('letter'),
+            BlurText(words: ['Flutter', 'animations', 'are', 'awesome','Flutter'],),
+            //WordFadeInText(sentence: 'Flutter animations are awesome'),
+          ],
+        ),
       )
     ));
   }

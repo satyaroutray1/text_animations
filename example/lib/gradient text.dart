@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 // GRADIENT TEXT ANIMATION (using ShaderMask)
 class GradientText extends StatefulWidget{
-  const GradientText({super.key});
+  const GradientText({super.key, required this.text});
+  
+  final String text;
 
   @override
   State<GradientText> createState() => _GradientTextState();
@@ -41,7 +43,7 @@ class _GradientTextState extends State<GradientText> with SingleTickerProviderSt
         final rect = bounds.shift(Offset(_animation.value*bounds.width, 5));
         return textGradient.createShader(rect);
       },
-      child: Text('Hello there', style: TextStyle(
+      child: Text(widget.text, style: TextStyle(
           fontSize: 40,
           fontWeight: FontWeight.bold
       ),),

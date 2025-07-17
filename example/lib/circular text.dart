@@ -6,7 +6,8 @@ import 'package:flutter_arc_text/flutter_arc_text.dart';
 import 'constants.dart';
 
 class CircularText extends StatefulWidget {
-  const CircularText({super.key});
+  const CircularText({super.key, required this.text});
+  final String text;
 
   @override
   State<CircularText> createState() => _CircularTextState();
@@ -46,7 +47,7 @@ class _CircularTextState extends State<CircularText> with SingleTickerProviderSt
         //margin: EdgeInsets.symmetric(horizontal: 10),
         child: ArcText(
             radius: 85,
-            text: 'Hello There,You!! Flutter!',
+            text: widget.text,
             textStyle: TextStyle(fontSize: 24, color: Constants.textColor,
             fontWeight: FontWeight.bold, letterSpacing: 5),
             startAngle: _animation!.value,
