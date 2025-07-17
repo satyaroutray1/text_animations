@@ -1,4 +1,5 @@
 import 'package:example/blur%20text.dart';
+import 'package:example/constants.dart';
 import 'package:example/rotating%20text.dart';
 import 'package:example/text%20pressure.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
+      backgroundColor: Constants.backgroundColor,
       body: Column(
         children: [
           // TextPressure('Hello There'),

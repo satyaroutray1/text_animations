@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'constants.dart';
+
 class GlitchTextLetter extends StatefulWidget{
   final String letter;
   const GlitchTextLetter(this.letter, {super.key});
@@ -69,10 +71,10 @@ class _GlitchTextLetterState extends State<GlitchTextLetter> with SingleTickerPr
         // Main black letter
         Text(
           widget.letter,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 100,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Constants.textColor,
           ),
         ),
       ],
@@ -143,7 +145,7 @@ class _FuzzyTextState extends State<FuzzyText> with TickerProviderStateMixin {
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: Constants.textColor,
                     letterSpacing: 1.5,
                     shadows: [
                       Shadow(

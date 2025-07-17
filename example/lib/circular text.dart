@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_arc_text/flutter_arc_text.dart';
 
+import 'constants.dart';
+
 class CircularText extends StatefulWidget {
   const CircularText({super.key});
 
@@ -45,7 +47,7 @@ class _CircularTextState extends State<CircularText> with SingleTickerProviderSt
         child: ArcText(
             radius: 85,
             text: 'Hello There,You!! Flutter!',
-            textStyle: TextStyle(fontSize: 24, color: Colors.black,
+            textStyle: TextStyle(fontSize: 24, color: Constants.textColor,
             fontWeight: FontWeight.bold, letterSpacing: 5),
             startAngle: _animation!.value,
             startAngleAlignment: StartAngleAlignment.start,

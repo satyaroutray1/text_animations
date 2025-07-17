@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'constants.dart';
 class RotatingText extends StatefulWidget {
   const RotatingText({super.key});
 
@@ -96,7 +98,7 @@ class CustomText extends StatelessWidget {
     return Text(text, style: TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 40,
-      color: textColor ?? Colors.black
+      color: textColor ?? Constants.textColor
     ),);
   }
 }

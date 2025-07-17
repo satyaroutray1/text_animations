@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'constants.dart';
+
 class BlurText extends StatefulWidget {
   const BlurText({super.key});
 
@@ -67,7 +69,7 @@ class _BlurTextState extends State<BlurText> with SingleTickerProviderStateMixin
                   style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black.withOpacity(dropAnimations[i].value/100),
+                    color: Constants.textColor.withOpacity(dropAnimations[i].value/100),
                   ),
                 ),
               ),
