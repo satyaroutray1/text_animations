@@ -1,8 +1,10 @@
+import 'package:example/blur%20text.dart';
 import 'package:example/rotating%20text.dart';
 import 'package:example/text%20pressure.dart';
 import 'package:flutter/material.dart';
 
 import 'circular text.dart';
+import 'fade in.dart';
 import 'glitch text.dart';
 import 'gradient text.dart';
 
@@ -47,7 +49,9 @@ class _MyHomePageState extends State<MyHomePage> {
           // CircularText(),
           //RotatingText()
           //FuzzyText('ttttttttt'),
-          GlitchTextLetter('letter')
+          //GlitchTextLetter('letter'),
+          BlurText()
+          //WordFadeInText(sentence: 'Flutter animations are awesome'),
         ],
       )
     ));
