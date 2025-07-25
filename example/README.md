@@ -1,16 +1,39 @@
-# example
+# 🎉 Flutter Text Animations Playground
 
-A new Flutter project.
+A collection of fun and creative text animations built using **Flutter**, inspired by the awesome [react-bits](https://github.com/DavidHDev/react-bits) repository.
 
-## Getting Started
+This project showcases multiple text effects that can be used in portfolios, intros, onboarding screens, or just for fun UI experimentation.
 
-This project is a starting point for a Flutter application.
+---
+### Blur Text Animation
 
-A few resources to get you started if this is your first Flutter project:
+![Blur Text](assets/gifs/blur_text.gif)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ✨ Features
+
+✔️ **BlurText** – A smooth blur-in/out effect cycling through multiple words  
+✔️ **RotationText** – Rotates each word in sequence  
+✔️ **TextPressure** – Expands and compresses letters like a breathing effect  
+✔️ **GradientText** – Animated gradient over the text  
+✔️ **CircularText** – Wraps text in a circular path  
+✔️ **GlitchTextLetter** – Classic glitch effect on each character  
+✔️ **ShinnyText** – Reflective shine sweeps across the text  
+✔️ **CurvedLoop** – Loops text along a curved path (experimental)
+
+---
+
+## 🛠 Getting Started
+
+### 🔧 Prerequisites
+
+- Flutter SDK (any stable channel)
+- Dart enabled IDE (VSCode, Android Studio)
+
+### 🚀 Run the App
+
+```bash
+git clone https://github.com/yourusername/flutter-text-animations.git
+cd flutter-text-animations
+flutter pub get
+flutter run
