@@ -8,6 +8,7 @@ This project showcases multiple text effects that can be used in portfolios, int
 ### Blur Text Animation
 
 ![Blur Text](assets/gifs/blur_text.gif)
+![Roatation Text](assets/gifs/rotation_text.gif)
 
 
 ## ✨ Features

@@ -48,20 +48,24 @@ class _MyHomePageState extends State<MyHomePage> {
     return SafeArea(child: Scaffold(
       backgroundColor: Constants.backgroundColor,
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            TextPressure('Hello There'),
-            GradientText(text: 'Hello There'),
-            CircularText(text: 'Hello There,You!! Flutter!',),
-            RotatingText(),
-            //FuzzyText('ttttttttt'),
-            GlitchTextLetter('letter'),
-            ShinnyText(text: 'Hello There'),
+        child: Center(
+          child: Column(
+            children: [
+              //BlurText(words: ['Flutter', 'animations', 'are', 'awesome','Flutter'],),
 
-            BlurText(words: ['Flutter', 'animations', 'are', 'awesome','Flutter'],),
-            //WordFadeInText(sentence: 'Flutter animations are awesome'),
-            //CurvedLoop()
-          ],
+               //RotationText(),
+               TextPressure('Hello There'),
+              // GradientText(text: 'Hello There'),
+              // CircularText(text: 'Hello There,You!! Flutter!',),
+              //
+              // //FuzzyText('ttttttttt'),
+              // GlitchTextLetter('letter'),
+              // ShinnyText(text: 'Hello There'),
+              //
+              // //WordFadeInText(sentence: 'Flutter animations are awesome'),
+              // CurvedLoop()
+            ],
+          ),
         ),
       )
     ));

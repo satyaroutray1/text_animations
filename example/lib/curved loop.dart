@@ -36,8 +36,8 @@ class _CurvedLoopState extends State<CurvedLoop> with SingleTickerProviderStateM
   Widget build(BuildContext context){
     return
       Container(
-        // height: 200,
-        // width: 200,
+        height: 250,
+        width: 200,
         // decoration: BoxDecoration(
         //     color: Colors.lightBlueAccent,
         //     borderRadius: BorderRadius.all(Radius.circular(100))
