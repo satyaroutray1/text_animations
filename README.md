@@ -1,39 +1,39 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# 🎉 Flutter Text Animations Playground
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A collection of fun and creative text animations built using **Flutter**, inspired by the awesome [react-bits](https://github.com/DavidHDev/react-bits) repository.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+This project showcases multiple text effects that can be used in portfolios, intros, onboarding screens, or just for fun UI experimentation.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+---
+### Blur Text Animation
 
-## Features
+![Blur Text](assets/gifs/blur_text.gif)
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
 
-## Getting started
+## ✨ Features
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+✔️ **BlurText** – A smooth blur-in/out effect cycling through multiple words  
+✔️ **RotationText** – Rotates each word in sequence  
+✔️ **TextPressure** – Expands and compresses letters like a breathing effect  
+✔️ **GradientText** – Animated gradient over the text  
+✔️ **CircularText** – Wraps text in a circular path  
+✔️ **GlitchTextLetter** – Classic glitch effect on each character  
+✔️ **ShinnyText** – Reflective shine sweeps across the text  
+✔️ **CurvedLoop** – Loops text along a curved path (experimental)
 
-## Usage
+---
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+## 🛠 Getting Started
 
-```dart
-const like = 'sample';
-```
+### 🔧 Prerequisites
 
-## Additional information
+- Flutter SDK (any stable channel)
+- Dart enabled IDE (VSCode, Android Studio)
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+### 🚀 Run the App
+
+```bash
+git clone https://github.com/yourusername/flutter-text-animations.git
+cd flutter-text-animations
+flutter pub get
+flutter run
