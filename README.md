@@ -9,6 +9,12 @@ This project showcases multiple text effects that can be used in portfolios, int
 
 ![Blur Text](assets/gifs/blur_text.gif)
 ![Roatation Text](assets/gifs/rotation_text.gif)
+![CircularText](assets/gifs/CircularText.gif)
+![CurvedLoop](assets/gifs/CurvedLoop.gif)
+![GlitchTextLetter](assets/gifs/GlitchTextLetter.gif)
+![GradientText](assets/gifs/GradientText.gif)
+![ShinnyText](assets/gifs/ShinnyText.gif)
+![text_pressure](assets/gifs/text_pressure.gif)
 
 
 ## ✨ Features
