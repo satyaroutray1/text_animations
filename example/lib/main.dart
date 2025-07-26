@@ -51,19 +51,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Center(
           child: Column(
             children: [
-              //BlurText(words: ['Flutter', 'animations', 'are', 'awesome','Flutter'],),
+              BlurText(words: ['Flutter', 'animations', 'are', 'awesome'],),
 
-               //RotationText(),
+               RotationText(),
                TextPressure('Hello There'),
-              // GradientText(text: 'Hello There'),
-              // CircularText(text: 'Hello There,You!! Flutter!',),
-              //
-              // //FuzzyText('ttttttttt'),
-              // GlitchTextLetter('letter'),
-              // ShinnyText(text: 'Hello There'),
-              //
-              // //WordFadeInText(sentence: 'Flutter animations are awesome'),
-              // CurvedLoop()
+              GradientText(text: 'Hello There'),
+              CircularText(text: 'Hello There,You!! Flutter!',),
+
+              //FuzzyText('ttttttttt'),
+              GlitchTextLetter('Hello There'),
+              ShinnyText(text: 'Hello There'),
+
+              //WordFadeInText(sentence: 'Flutter animations are awesome'),
+               CurvedLoop()
             ],
           ),
         ),

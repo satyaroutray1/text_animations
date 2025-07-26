@@ -68,7 +68,7 @@ class _BlurTextState extends State<BlurText> with SingleTickerProviderStateMixin
                 child: Text(
                   widget.words[i],
                   style: TextStyle(
-                    fontSize: 50,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Constants.textColor.withOpacity(dropAnimations[i].value/100),
                   ),

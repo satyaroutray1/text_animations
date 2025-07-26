@@ -19,8 +19,8 @@ class _CurvedLoopState extends State<CurvedLoop> with SingleTickerProviderStateM
   void initState() {
     // TODO: implement initState
     super.initState();
-    _controller = AnimationController(vsync: this, duration: Duration(seconds: 10));
-    _animation = Tween<double>(begin: -pi/2, end: 2*pi).animate(_controller!)..addListener((){
+    _controller = AnimationController(vsync: this, duration: Duration(seconds: 15));
+    _animation = Tween<double>(begin: pi, end: -pi/2).animate(_controller!)..addListener((){
       setState(() {
 
       });
@@ -35,24 +35,35 @@ class _CurvedLoopState extends State<CurvedLoop> with SingleTickerProviderStateM
   @override
   Widget build(BuildContext context){
     return
-      Container(
-        height: 250,
-        width: 200,
-        // decoration: BoxDecoration(
-        //     color: Colors.lightBlueAccent,
-        //     borderRadius: BorderRadius.all(Radius.circular(100))
-        // ),
-        //margin: EdgeInsets.symmetric(horizontal: 10),
-        child: ArcText(
-            radius: 100,//MediaQuery.of(context).size.width,
-            text: 'Hello There',
-            textStyle: TextStyle(fontSize: 24, color: Constants.textColor,
-                fontWeight: FontWeight.bold, letterSpacing: 5),
-            startAngle: _animation!.value,
-            startAngleAlignment: StartAngleAlignment.start,
-            placement: Placement.middle,
-            direction: Direction.clockwise
-        ),
+      Stack(
+        children: [
+          Container(
+            //color: Colors.red,
+            height: 220,
+            width: 220,
+            // decoration: BoxDecoration(
+            //     color: Colors.lightBlueAccent,
+            //     borderRadius: BorderRadius.all(Radius.circular(100))
+            // ),
+            //margin: EdgeInsets.symmetric(horizontal: 10),
+            child: ArcText(
+              radius: 100,//MediaQuery.of(context).size.width,
+              text: 'Hello There! Hello There! ',
+              textStyle: TextStyle(fontSize: 24, color: Constants.textColor,
+                  fontWeight: FontWeight.bold, letterSpacing: 5),
+              startAngle: _animation!.value,
+              startAngleAlignment: StartAngleAlignment.start,
+              placement: Placement.middle,
+              direction: Direction.clockwise,
+            ),
+          ),
+          Container(
+            color: Colors.black,
+            height: 110,
+            width: 220,
+
+          )
+        ],
       )
     ;
   }
