@@ -5,6 +5,7 @@ A collection of fun and creative text animations built using **Flutter**, inspir
 This project showcases multiple text effects that can be used in portfolios, intros, onboarding screens, or just for fun UI experimentation.
 
 ---
+
 ### Blur Text Animation
 
 ![Blur Text](assets/gifs/blur_text.gif)
@@ -16,6 +17,7 @@ This project showcases multiple text effects that can be used in portfolios, int
 ![ShinnyText](assets/gifs/ShinnyText.gif)
 ![text_pressure](assets/gifs/text_pressure.gif)
 
+--- 
 
 ## ✨ Features
 
