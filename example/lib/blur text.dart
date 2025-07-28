@@ -15,9 +15,7 @@ class _BlurTextState extends State<BlurText> with SingleTickerProviderStateMixin
   late AnimationController _animationController;
   late Animation<double> _animation;
   late List<Animation<double>> dropAnimations;
-
-   //List<String> words = widget.textlist;
-
+  
   @override
   void initState() {
     super.initState();

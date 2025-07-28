@@ -19,7 +19,6 @@ class _GlitchTextLetterState extends State<GlitchTextLetter> with SingleTickerPr
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _animationController = AnimationController(vsync: this, duration: Duration(milliseconds: 360));
     _animation = Tween<double>(begin: 2, end: 5).animate(_animationController)..addListener((){
